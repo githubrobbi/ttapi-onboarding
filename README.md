@@ -2,7 +2,7 @@
 
 🚀 **Cross-platform onboarding tool for TTAPI team members**
 
-Secure, automated setup for SSH keys, GPG keys, GitHub authentication, and development environment configuration.
+Secure, automated setup for SSH keys, GPG keys, GitHub authentication, and access request generation.
 
 ## 🎯 Quick Start
 
@@ -35,7 +35,17 @@ The tool will guide you through:
 - SSH key generation
 - GPG key creation  
 - GitHub authentication
-- Repository access verification
+- Access request generation
+
+### 5. Wait for Approval
+- The tool generates an access request file
+- Send this file to your team lead
+- **Wait for approval notification** before proceeding
+
+### 6. After Approval
+- Follow the setup instructions in the main TTAPI repository README
+- Use the curl command provided in the main repo
+- The main repository setup script will guide you through remaining steps
 
 ## 🛠️ What This Tool Does
 
@@ -49,10 +59,11 @@ The tool will guide you through:
 - **GitHub Authentication**: Configures SSH and GPG keys with GitHub
 - **Environment Validation**: Verifies all tools and access are working
 
-### 🔍 Verification
-- **Access Testing**: Confirms GitHub repository access
+### 🔍 Access Request & Verification
+- **Access Request Generation**: Creates request file for admin approval
 - **System Validation**: Checks all requirements are met
-- **Setup Verification**: Ensures everything is configured correctly
+- **Setup Verification**: Ensures keys and configuration are correct
+- **Access Testing**: Verifies GitHub connectivity (after admin approval)
 
 ## 📋 Prerequisites
 
@@ -66,13 +77,13 @@ Before running the onboarding tool, ensure you have:
 ## 🎮 Available Commands
 
 ```bash
-# Complete onboarding process
+# Complete onboarding process (generates access request)
 ./ttapi-onboard setup
 
 # Generate keys only (no GitHub setup)
 ./ttapi-onboard generate-keys
 
-# Verify existing setup
+# Verify existing setup (after admin approval)
 ./ttapi-onboard verify-access
 
 # Validate system requirements
@@ -149,11 +160,12 @@ chmod +x ttapi-onboard-*
 
 ## 🎯 What Happens After Setup
 
-1. **SSH Key**: Added to your GitHub account for repository access
-2. **GPG Key**: Added to your GitHub account for commit signing
+1. **SSH Key**: Generated and added to your GitHub account
+2. **GPG Key**: Generated and added to your GitHub account for commit signing
 3. **Git Config**: Configured with your name, email, and signing key
-4. **Repository Access**: You'll be able to clone and contribute to TTAPI repositories
-5. **Verification**: Tool confirms everything is working correctly
+4. **Access Request**: Generated for admin approval
+5. **Pending Approval**: Wait for team lead to grant repository access
+6. **Post-Approval**: Follow main repository README for remaining setup steps
 
 ## 📄 License
 
@@ -162,6 +174,8 @@ This tool is licensed under the MPL-2.0 License. See individual releases for com
 ## 🏢 About
 
 This onboarding tool is designed specifically for TTAPI team members to streamline the setup process for secure development environment configuration.
+
+**Important**: This tool generates an access request that must be approved by your team lead before you can access TTAPI repositories. After approval, follow the instructions in the main TTAPI repository README.
 
 **Repository Purpose**: This repository contains only release binaries for public distribution. Source code is maintained separately in private repositories.
 
