@@ -1,6 +1,6 @@
 # TTAPI Onboarding Tool
 
-> **Version 0.1.186** | Built on 2025-07-22
+> **Version 0.1.187** | Built on 2025-07-22
 
 🚀 **Cross-platform onboarding tool for TTAPI team members**
 
